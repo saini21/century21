@@ -1,0 +1,27 @@
+/* Add here all your css styles (customizations) */
+a.active{color:#72c02c !important;}
+.message{
+    position: fixed;
+    top: 20px;
+    text-align: center;
+    color: #000000;
+    z-index: 9999;
+    width: 80%;
+    margin: 0 10%;
+}
+.pagination li a{
+    border: 1px solid #e1eaea !important;
+    padding: 0.57143rem 0.85714rem !important;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #555;
+    text-decoration: none;
+    border-radius: 4px !important;
+    display: inline-block;
+    text-align: center;
+}
+
+.pagination li {margin-right: .5rem;}
+

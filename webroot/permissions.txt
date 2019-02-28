@@ -1,0 +1,7 @@
+sudo find . -type d -exec chmod 0755 {} \;
+sudo find . -type f -exec chmod 0644 {} \;
+
+
+INSERT INTO `admins` (`id`, `name`, `email`, `role`, `password`, `forgot_password_token`, `image_id`, `created`, `modified`) VALUES
+(2, 'Super Admin', 'admin@gmail.com', 'Admin', '$2y$10$xHM/piNh8WcbC7rK3BxsNuQNz840XBBeTtuK4pS5Bnd2KVWBUx5Dm', '', 39, '0000-00-00 00:00:00', '2019-02-04 04:40:55');
+COMMIT;

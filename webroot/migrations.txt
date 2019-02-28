@@ -1,0 +1,41 @@
+Admins
+sudo bin/cake bake migration CreateAdmins name:string email:string password:string forgot_password_token:string  image_id:biginteger created modified
+
+Users
+sudo bin/cake bake migration CreateUsers first_name:string last_name:string reporting_name:string email:string  password:string forgot_password_token:string image_id:biginteger phone:string address:string city_id:integer state_id:integer zip:string role:string created modified
+
+Properties
+sudo bin/cake bake migration CreateProperties name:string address: city_id:integer state_id:integer zip:string lat:float lng:float image_id:biginteger status:boolean is_premium:boolean is_featured:boolean last_searched_at:datetime created modified
+
+Amenities
+sudo bin/cake bake migration CreateAmenities category:string name:string status:boolean created modified
+
+Property Amenities
+sudo bin/cake bake migration CreatePropertyAmenities property_id:biginteger amenity_id:biginteger amenity_value:string created modified
+
+Images
+sudo bin/cake bake migration CreateImages category:string image:string small_thumb:string medium_thumb:string large_thumb:string created modified
+
+Property Images
+sudo bin/cake bake migration CreateApartmentImages property_id:biginteger image_id:biginteger status:boolean created modified
+
+Options
+sudo bin/cake bake migration CreateOptions option_category:string option_name:string option_value:text default_value:string created modified
+
+States
+sudo bin/cake bake migration CreateStates  name:string  short_name:string status:boolean created modified
+
+Cities
+sudo bin/cake bake migration CreateCities  name:string  state_code:string status:boolean created modified
+
+
+Contacts
+sudo bin/cake bake migration CreateContacts contact_type:string name:string apartment_name:string  email:string phone:string message:text created modified
+
+Pages
+sudo bin/cake bake migration CreatePages page:string section_name:string section_heading:string section_tag_line:string section_text:text created modified
+
+
+Testimonials
+sudo bin/cake bake migration CreateTestimonials user_name:string image_id:biginteger testimonial:text created modified
+
