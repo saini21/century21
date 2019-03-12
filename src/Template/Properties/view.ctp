@@ -27,44 +27,76 @@
     <h3><?= h($property->name) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($property->name) ?></td>
+            <th scope="row"><?= __('Community') ?></th>
+            <td><?= h($property->community) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Idx Date') ?></th>
+            <td><?= h($property->idx_date) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Pix Update') ?></th>
+            <td><?= h($property->pix_update) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Sql Timestamp') ?></th>
+            <td><?= h($property->sql_timestamp) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Bedroom') ?></th>
+            <td><?= h($property->bedroom) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Bedroom Plus') ?></th>
+            <td><?= h($property->bedroom_plus) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Bath Total') ?></th>
+            <td><?= h($property->bath_total) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Realtor') ?></th>
+            <td><?= h($property->realtor) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Class Type') ?></th>
+            <td><?= h($property->class_type) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Ml Num') ?></th>
+            <td><?= h($property->ml_num) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Lp Dol') ?></th>
+            <td><?= h($property->lp_dol) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Address') ?></th>
             <td><?= h($property->address) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('City') ?></th>
-            <td><?= $property->has('city') ? $this->Html->link($property->city->name, ['controller' => 'Cities', 'action' => 'view', $property->city->id]) : '' ?></td>
+            <th scope="row"><?= __('Area') ?></th>
+            <td><?= h($property->area) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('State') ?></th>
-            <td><?= $property->has('state') ? $this->Html->link($property->state->name, ['controller' => 'States', 'action' => 'view', $property->state->id]) : '' ?></td>
+            <th scope="row"><?= __('County') ?></th>
+            <td><?= h($property->county) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Zip') ?></th>
             <td><?= h($property->zip) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Image') ?></th>
-            <td><?= $property->has('image') ? $this->Html->link($property->image->id, ['controller' => 'Images', 'action' => 'view', $property->image->id]) : '' ?></td>
+            <th scope="row"><?= __('Municipality District') ?></th>
+            <td><?= h($property->municipality_district) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Municipality') ?></th>
+            <td><?= h($property->municipality) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($property->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Lat') ?></th>
-            <td><?= $this->Number->format($property->lat) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Lng') ?></th>
-            <td><?= $this->Number->format($property->lng) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Last Searched At') ?></th>
-            <td><?= h($property->last_searched_at) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -74,19 +106,27 @@
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($property->modified) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Status') ?></th>
-            <td><?= $property->status ? __('Yes') : __('No'); ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Is Premium') ?></th>
-            <td><?= $property->is_premium ? __('Yes') : __('No'); ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Is Featured') ?></th>
-            <td><?= $property->is_featured ? __('Yes') : __('No'); ?></td>
-        </tr>
     </table>
+    <div class="row">
+        <h4><?= __('Tour Url') ?></h4>
+        <?= $this->Text->autoParagraph(h($property->tour_url)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Ad Text') ?></h4>
+        <?= $this->Text->autoParagraph(h($property->ad_text)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Extras') ?></h4>
+        <?= $this->Text->autoParagraph(h($property->extras)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Legal Desc') ?></h4>
+        <?= $this->Text->autoParagraph(h($property->Legal_desc)); ?>
+    </div>
+    <div class="row">
+        <h4><?= __('Property Json') ?></h4>
+        <?= $this->Text->autoParagraph(h($property->property_json)); ?>
+    </div>
     <div class="related">
         <h4><?= __('Related Property Amenities') ?></h4>
         <?php if (!empty($property->property_amenities)): ?>

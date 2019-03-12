@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -23,8 +24,7 @@ use Cake\Validation\Validator;
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class PropertyImagesTable extends Table
-{
+class PropertyImagesTable extends Table {
 
     /**
      * Initialize method
@@ -32,8 +32,7 @@ class PropertyImagesTable extends Table
      * @param array $config The configuration for the Table.
      * @return void
      */
-    public function initialize(array $config)
-    {
+    public function initialize(array $config) {
         parent::initialize($config);
 
         $this->setTable('property_images');
@@ -42,14 +41,10 @@ class PropertyImagesTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Properties', [
-            'foreignKey' => 'property_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Images', [
-            'foreignKey' => 'image_id',
-            'joinType' => 'INNER'
-        ]);
+        $this->addBehavior('CounterCache', ['Properties' => ['no_of_images']]);
+
+        $this->belongsTo('Properties', ['foreignKey' => 'property_id', 'joinType' => 'INNER']);
+        $this->belongsTo('Images', ['foreignKey' => 'image_id', 'joinType' => 'INNER']);
     }
 
     /**
@@ -58,16 +53,10 @@ class PropertyImagesTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
-    {
-        $validator
-            ->integer('id')
-            ->allowEmptyString('id', 'create');
+    public function validationDefault(Validator $validator) {
+        $validator->integer('id')->allowEmptyString('id', 'create');
 
-        $validator
-            ->boolean('status')
-            ->requirePresence('status', 'create')
-            ->allowEmptyString('status', false);
+        $validator->boolean('status')->requirePresence('status', 'create')->allowEmptyString('status', false);
 
         return $validator;
     }
@@ -79,8 +68,7 @@ class PropertyImagesTable extends Table
      * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
      * @return \Cake\ORM\RulesChecker
      */
-    public function buildRules(RulesChecker $rules)
-    {
+    public function buildRules(RulesChecker $rules) {
         $rules->add($rules->existsIn(['property_id'], 'Properties'));
         $rules->add($rules->existsIn(['image_id'], 'Images'));
 

@@ -26,18 +26,23 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('community') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('idx_date') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('pix_update') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('sql_timestamp') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('bedroom') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('bedroom_plus') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('bath_total') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('realtor') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('class_type') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ml_num') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('lp_dol') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('address') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('city_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('state_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('area') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('county') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('zip') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('lat') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('lng') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('image_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('status') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('is_premium') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('is_featured') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('last_searched_at') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('municipality_district') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('municipality') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -47,18 +52,23 @@
             <?php foreach ($properties as $property): ?>
             <tr>
                 <td><?= $this->Number->format($property->id) ?></td>
-                <td><?= h($property->name) ?></td>
+                <td><?= h($property->community) ?></td>
+                <td><?= h($property->idx_date) ?></td>
+                <td><?= h($property->pix_update) ?></td>
+                <td><?= h($property->sql_timestamp) ?></td>
+                <td><?= h($property->bedroom) ?></td>
+                <td><?= h($property->bedroom_plus) ?></td>
+                <td><?= h($property->bath_total) ?></td>
+                <td><?= h($property->realtor) ?></td>
+                <td><?= h($property->class_type) ?></td>
+                <td><?= h($property->ml_num) ?></td>
+                <td><?= h($property->lp_dol) ?></td>
                 <td><?= h($property->address) ?></td>
-                <td><?= $property->has('city') ? $this->Html->link($property->city->name, ['controller' => 'Cities', 'action' => 'view', $property->city->id]) : '' ?></td>
-                <td><?= $property->has('state') ? $this->Html->link($property->state->name, ['controller' => 'States', 'action' => 'view', $property->state->id]) : '' ?></td>
+                <td><?= h($property->area) ?></td>
+                <td><?= h($property->county) ?></td>
                 <td><?= h($property->zip) ?></td>
-                <td><?= $this->Number->format($property->lat) ?></td>
-                <td><?= $this->Number->format($property->lng) ?></td>
-                <td><?= $property->has('image') ? $this->Html->link($property->image->id, ['controller' => 'Images', 'action' => 'view', $property->image->id]) : '' ?></td>
-                <td><?= h($property->status) ?></td>
-                <td><?= h($property->is_premium) ?></td>
-                <td><?= h($property->is_featured) ?></td>
-                <td><?= h($property->last_searched_at) ?></td>
+                <td><?= h($property->municipality_district) ?></td>
+                <td><?= h($property->municipality) ?></td>
                 <td><?= h($property->created) ?></td>
                 <td><?= h($property->modified) ?></td>
                 <td class="actions">

@@ -13,6 +13,12 @@ $menuItems = [
         'icon_class' => 'fa fa-building-o',
         'custom_sub_menu' => [
             [
+                'label' => 'PHRETS',
+                'controller' => 'Properties',
+                'action' => 'phrets',
+                'icon_class' => 'fa fa-circle-o',
+            ],
+            [
                 'label' => 'List Amenities',
                 'controller' => 'Amenities',
                 'icon_class' => 'fa fa-list',

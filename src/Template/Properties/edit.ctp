@@ -31,18 +31,28 @@
     <fieldset>
         <legend><?= __('Edit Property') ?></legend>
         <?php
-            echo $this->Form->control('name');
+            echo $this->Form->control('tour_url');
+            echo $this->Form->control('ad_text');
+            echo $this->Form->control('extras');
+            echo $this->Form->control('Legal_desc');
+            echo $this->Form->control('community');
+            echo $this->Form->control('idx_date');
+            echo $this->Form->control('pix_update');
+            echo $this->Form->control('sql_timestamp');
+            echo $this->Form->control('bedroom');
+            echo $this->Form->control('bedroom_plus');
+            echo $this->Form->control('bath_total');
+            echo $this->Form->control('realtor');
+            echo $this->Form->control('class_type');
+            echo $this->Form->control('ml_num');
+            echo $this->Form->control('lp_dol');
             echo $this->Form->control('address');
-            echo $this->Form->control('city_id', ['options' => $cities]);
-            echo $this->Form->control('state_id', ['options' => $states]);
+            echo $this->Form->control('area');
+            echo $this->Form->control('county');
             echo $this->Form->control('zip');
-            echo $this->Form->control('lat');
-            echo $this->Form->control('lng');
-            echo $this->Form->control('image_id', ['options' => $images]);
-            echo $this->Form->control('status');
-            echo $this->Form->control('is_premium');
-            echo $this->Form->control('is_featured');
-            echo $this->Form->control('last_searched_at');
+            echo $this->Form->control('municipality_district');
+            echo $this->Form->control('municipality');
+            echo $this->Form->control('property_json');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
