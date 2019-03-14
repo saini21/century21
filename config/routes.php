@@ -72,20 +72,15 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'home']);
+    $routes->connect('/search', ['controller' => 'Properties', 'action' => 'search']);
     $routes->connect('/privacy-policy', ['controller' => 'Pages', 'action' => 'privacyPolicy']);
     $routes->connect('/terms-and-conditions', ['controller' => 'Pages', 'action' => 'termsAndConditions']);
-    $routes->connect('/about', ['controller' => 'Pages', 'action' => 'about']);
-    $routes->connect('/features', ['controller' => 'Pages', 'action' => 'features']);
+    $routes->connect('/about-me', ['controller' => 'Pages', 'action' => 'about']);
     $routes->connect('/faqs', ['controller' => 'Pages', 'action' => 'faqs']);
-    $routes->connect('/products', ['controller' => 'Pages', 'action' => 'products']);
     $routes->connect('/how-it-works', ['controller' => 'Pages', 'action' => 'howItWorks']);
-    $routes->connect('/contact', ['controller' => 'Pages', 'action' => 'contact']);
+    $routes->connect('/contact-me', ['controller' => 'Pages', 'action' => 'contact']);
     $routes->connect('/dashboard', ['controller' => 'Users', 'action' => 'dashboard']);
-    $routes->connect('/profile', ['controller' => 'Users', 'action' => 'profile']);
-    $routes->connect('/sign-up', ['controller' => 'Users', 'action' => 'register']);
-    $routes->connect('/sign-in', ['controller' => 'Users', 'action' => 'login']);
-    $routes->connect('/sign-out', ['controller' => 'Users', 'action' => 'logout']);
-
+    
     /**
      * Connect catchall routes for all controllers.
      *

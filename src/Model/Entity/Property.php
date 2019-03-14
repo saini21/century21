@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
@@ -38,9 +39,8 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\PropertyAmenity[] $property_amenities
  * @property \App\Model\Entity\PropertyImage[] $property_images
  */
-class Property extends Entity
-{
-
+class Property extends Entity {
+    
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -51,6 +51,7 @@ class Property extends Entity
      * @var array
      */
     protected $_accessible = [
+        's_r' => true,
         'tour_url' => true,
         'ad_text' => true,
         'extras' => true,
@@ -72,6 +73,8 @@ class Property extends Entity
         'zip' => true,
         'municipality_district' => true,
         'municipality' => true,
+        'lat' => true,
+        'lng' => true,
         'created' => true,
         'modified' => true,
         'property_json' => true,
@@ -80,5 +83,9 @@ class Property extends Entity
         'image' => true,
         'property_amenities' => true,
         'property_images' => true
+    ];
+    
+    protected $_hidden = [
+        'property_json'
     ];
 }

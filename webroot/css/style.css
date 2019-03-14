@@ -3,8 +3,8 @@
 }
 @font-face {
     font-family: 'robotoblack';
-    src: url(../font/roboto-black-webfont.woff2) format('woff2'),
-         url(../font/roboto-black-webfont.woff) format('woff');
+    src: url('../font/roboto-black-webfont.woff2') format('woff2'),
+         url('../font/roboto-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -497,6 +497,444 @@ background-size: 62px;
   max-width: 22px; display: inline-block;
 }
 
+/**********************about us************************/
+
+.about-me-bnr-bg{
+  background:url(../img/abt-bg.jpg) no-repeat fixed; background-size: cover; background-position: top center;
+  height: 250px; position: relative;
+}
+.about-me-bnr-bg::after{
+  position: absolute; content: ""; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); left: 0px; top: 0px;
+}
+.about-me-bnr-bg h4{
+  color: #fff; position: relative; z-index: 5; font-size: 60px; font-family: 'robotoblack'; text-transform: uppercase;
+}
+
+.circle-container {
+  width: 330px;
+  height: 330px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-animation: scale-circle 1s linear 1;
+  animation: scale-circle 1s linear 1;
+  bottom: 0px;
+  right: 0px;
+}
+
+.circle,
+.circle div {
+    width: 100%;
+    height: 100%;
+    position: absolute
+}
+
+.circle {
+    -webkit-transition: all .5s;
+    transition: all 1s
+}
+
+.circle div {
+    border-radius: 50%;
+    background: 0 0;
+    border: 1px solid #a08a58;
+    -webkit-animation: translate-circles 3s infinite;
+    animation: translate-circles 3s infinite;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in
+}
+
+.circle1 div {
+    left: -5%;
+    line-height: 1.3em;
+    top: -3%;
+    -webkit-animation: circle-rotate 10s linear infinite;
+    animation: circle-rotate 10s linear infinite
+}
+
+.circle2 div {
+    left: -4%;
+    top: -6%;
+    -webkit-animation: circle-rotate 7s linear infinite;
+    animation: circle-rotate 7s linear infinite
+}
+
+.circle3 div {
+    left: 1%;
+    top: 5%;
+    -webkit-animation: circle-rotate 7.3s linear infinite;
+    animation: circle-rotate 7.3s linear infinite
+}
+
+.circle4 div {
+    left: -5%;
+    top: 4%;
+    -webkit-animation: circle-rotate 6s linear infinite;
+    animation: circle-rotate 6s linear infinite
+}
+
+.circle5 div {
+    left: -5%;
+    top: -3%;
+    -webkit-animation: circle-rotate 7.5s linear infinite;
+    animation: circle-rotate 7.5s linear infinite
+}
+
+.circle6 div {
+    left: 3%;
+    top: -2%;
+    -webkit-animation: circle-rotate 6.7s linear infinite;
+    animation: circle-rotate 6.7s linear infinite
+}
+
+.circle7 div {
+    left: 0;
+    top: 0;
+    -webkit-animation: circle-rotate 8.5s linear infinite;
+    animation: circle-rotate 8.5s linear infinite
+}
+
+.circle8 div {
+    left: -1%;
+    top: 3%;
+    -webkit-animation: circle-rotate 5.2s linear infinite;
+    animation: circle-rotate 5.2s linear infinite
+}
+
+.circle9 div {
+    left: -7%;
+    top: 5%;
+    -webkit-animation: circle-rotate 6.3s linear infinite;
+    animation: circle-rotate 6.3s linear infinite
+}
+
+.circle10 div {
+    left: 3%;
+    top: 0;
+    -webkit-animation: circle-rotate 5.6s linear infinite;
+    animation: circle-rotate 5.6s linear infinite
+}
+
+.circle11 div {
+    left: 3%;
+    top: -2%;
+    -webkit-animation: circle-rotate 7s linear infinite;
+    animation: circle-rotate 7s linear infinite
+}
+
+.circle12 div {
+    left: -1%;
+    top: -2%;
+    -webkit-animation: circle-rotate 9.9s linear infinite;
+    animation: circle-rotate 9.9s linear infinite
+}
+
+.circle13 div {
+    left: -2%;
+    top: 1%;
+    -webkit-animation: circle-rotate 10.2s linear infinite;
+    animation: circle-rotate 10.2s linear infinite
+}
+
+.circle14 div {
+    left: 3.5%;
+    top: 6%;
+    -webkit-animation: circle-rotate 4.9s linear infinite;
+    animation: circle-rotate 4.9s linear infinite
+}
+
+.circle15 div {
+    left: -3%;
+    top: -1%;
+    -webkit-animation: circle-rotate 7.3s linear infinite;
+    animation: circle-rotate 7.3s linear infinite
+}
+
+.circle-container.expand .circle2 {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.circle-container.expand .circle3 {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.circle-container.expand .circle4 {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+}
+
+.circle-container.expand .circle5 {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5)
+}
+
+.circle-container.expand .circle6 {
+    -webkit-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    transform: scale(1.8)
+}
+
+.circle-container.expand .circle7 {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2)
+}
+
+.circle-container.expand .circle8 {
+    -webkit-transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    transform: scale(2.2)
+}
+
+.circle-container.expand .circle9 {
+    -webkit-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5)
+}
+
+.circle-container.expand .circle10 {
+    -webkit-transform: scale(2.6);
+    -ms-transform: scale(2.6);
+    transform: scale(2.6)
+}
+
+.circle-container.expand .circle11 {
+    -webkit-transform: scale(2.7);
+    -ms-transform: scale(2.7);
+    transform: scale(2.7)
+}
+
+.circle-container.expand .circle12 {
+    -webkit-transform: scale(2.9);
+    -ms-transform: scale(2.9);
+    transform: scale(2.9)
+}
+
+.circle-container.expand .circle13 {
+    -webkit-transform: scale(3.1);
+    -ms-transform: scale(3.1);
+    transform: scale(3.1)
+}
+
+.circle-container.expand .circle14 {
+    -webkit-transform: scale(3.25);
+    -ms-transform: scale(3.25);
+    transform: scale(3.25)
+}
+
+.circle-container.expand .circle15 {
+    -webkit-transform: scale(3.4);
+    -ms-transform: scale(3.4);
+    transform: scale(3.4)
+}
+
+.circle-container.compress .circle div {
+    left: 0!important;
+    top: 0!important
+}
+
+.circle.extended-time {
+    transition: all 1.5s ease-out
+}
+
+@keyframes scale-circle {
+    0% {
+        transform: scale(4);
+        opacity: 1
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes circle-rotate {
+    0% {
+        -webkit-transform: rotate(0) translate(-20px) rotate(0) scale(1);
+        transform: rotate(0) translate(-20px) rotate(0) scale(1)
+    }
+    100% {
+        -webkit-transform: rotate(360deg) translate(-20px) rotate(-360deg) scale(1);
+        transform: rotate(360deg) translate(-20px) rotate(-360deg) scale(1)
+    }
+}
+
+@keyframes circle-rotate {
+    0% {
+        -webkit-transform: rotate(0) translate(-20px) rotate(0) scale(1);
+        transform: rotate(0) translate(-20px) rotate(0) scale(1)
+    }
+    100% {
+        -webkit-transform: rotate(360deg) translate(-20px) rotate(-360deg) scale(1);
+        transform: rotate(360deg) translate(-20px) rotate(-360deg) scale(1)
+    }
+}
+.abt-img {
+  height: 330px;
+  width: 330px;
+  border-radius: 100%;
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 5; overflow: hidden; margin: auto; box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
+}
+.abt-img img {
+  width: 100%;
+  height: 100%;
+}
+.bg-gray{
+  background-color: #f5f5f5;
+}
+.testi-outer{
+  background:url(../img/testi.jpg) no-repeat fixed; background-size: cover; background-position: top center; position: relative;
+}
+.testi-outer::after{
+  position: absolute; content: ""; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); left: 0px; top: 0px;
+}
+.testi-outer img {
+  width: auto !important;
+}
+.testi-outer img{
+  display: inline-block !important;
+}
+.testi-outer p{
+  color: #fff; font-size: 18px; line-height: 28px; margin-top: 40px; margin-bottom: 30px;
+}
+.testi-user {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  background: #fff;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 2px solid #a08a58; vertical-align: middle;
+}
+.testi-user-name {
+  display: inline-block;
+  vertical-align: middle; text-align: left; margin-left: 12px;
+}
+.testi-user-name h4{
+  font-size: 16px; color: #fff; margin-bottom: 5px;
+}
+.testi-user-name h5{
+  font-size: 16px; color: #fff;
+}
+.abt-add-out h4 {
+  font-size: 20px;
+  color: #000;
+  font-family: 'robotobold';
+  position: relative;
+  padding-left: 27px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.abt-add-out h4 i{
+  font-size: 20px; color: #a08a58; position: absolute; top: 2px; left: 0px;
+}
+.abt-map {
+  width: 100% !important;
+  height: 200px !important;
+  border: 3px solid #ddd;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  float: left; border-radius: 5px;
+}
+.abt-map img {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.inner-heading{
+  font-size: 32px; color: #000; text-transform: uppercase; font-family: 'robotobold'; margin-bottom: 20px;
+}
+.abt-list li{
+  display: inline-block; width: 100%; position: relative; padding-left: 25px;
+}
+.abt-list li i{
+  position: absolute; left: 0px; top: 2px; font-size: 20px; color: #a08a58;
+}
+.abt-sol-outer li{
+  display: inline-block; vertical-align: top; margin: 5px 5px;
+}
+.abt-sol-outer li a{
+  width: 80px; height: 80px; border-radius: 100%; text-align: center; background-color: #a08a58; display: inline-block; padding: 25px 0px;
+}
+.abt-sol-outer li a i{
+  font-size: 25px; color: #fff;
+}
+.line-btn{
+  font-size: 20px; color: #a08a58; border:2px solid #a08a58; text-transform: uppercase; border-radius: 5px; font-family: 'robotobold'; display: inline-block;
+  padding: 18px 40px; text-decoration: none !important;
+}
+.line-btn:hover{
+  background-color: #a08a58; color: #fff;
+}
+.abt-ryt-top-ad p{
+  margin: 5px 0px;
+}
+.abt-ryt-top-ad p span{
+  font-family: 'robotobold'; color: #000;
+}
+.abt-logo-btn {
+  width: 250px;
+  padding: 20px 20px;
+}
+.form-control.h-100{
+  height: 100px !important;
+}
+.abt-map-img{
+  border-radius: 5px; border:5px solid #ddd;
+}
+
+/**********************about us************************/
+
+/*****************search******************/
+
+.search-top-filter{
+  position: fixed; z-index: 9; top: 0px; left: 0px; background-color: #fff;
+}
+.search-page-outer {
+  padding-top: 77px;
+  padding-left: 65.5%;
+}
+.search-page-left {
+  position: fixed;
+  height: 100%; left: 0px; width: 65%;
+}
+.serch-block1 {
+  display: inline-block;
+  vertical-align: top;
+  width: 47%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.search-page-left img{
+  height: 100%; width: 100%;
+}
+.search-page-right {
+  float: left;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+/*****************search******************/
+
+@media screen and (max-width:1600px) {
+
+.serch-block1 {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+}
+
 
 @media screen and (max-width:1300px) {
 
@@ -569,6 +1007,17 @@ background-size: 62px;
 
 }
 
+@media screen and (max-width:767px) {
+
+.mt-md-40{
+  margin-top: 40px;
+}
+.abt-ryt-top-ad {
+  text-align: center;
+}
+
+}
+
 @media screen and (max-width:600px) {
 
 .owl-prev {
@@ -610,6 +1059,29 @@ width: 40px;
 .banner-left h4 {
   font-size: 30px;
 }
+.about-me-bnr-bg h4{
+  font-size: 40px;
+}
+.about-me-bnr-bg{
+  width: 200px;
+}
+.abt-img {
+  height: 230px;
+  width: 230px;
+}
+.circle-container {
+  width: 230px;
+  height: 230px;
+}
+.abt-sol-outer li a {
+  width: 60px;
+  height: 60px;
+  padding: 18px 0px;
+}
+.abt-sol-outer li a i {
+  font-size: 20px;
+}
+
 
 }
 
@@ -623,6 +1095,12 @@ width: 40px;
 }
 .agent-left-content ul li a i{
   position: static;
+}
+.mb-15-575{
+  margin-bottom: 15px;
+}
+.col-3-575{
+  width: 32%;
 }
 
 }

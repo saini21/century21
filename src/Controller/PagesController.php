@@ -84,8 +84,17 @@ class PagesController extends AppController {
     }
     
     public function home() {
+        $this->loadModel('Properties');
+        $properties = $this->Properties->find('all')
+            ->contain(['PropertyImages' => ['Images']])
+            ->where(['Properties.lat !=' => 0])
+            ->group('Properties.id')
+            ->limit(10)
+            ->all()->toArray();
+        
         $content = $this->getContent('Home');
         $this->set('content', $content);
+        $this->set('properties', $this->formattedProperties($properties));
     }
     
     public function about() {

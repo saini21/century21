@@ -1,115 +1,196 @@
-<!-- Promo Block -->
-<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall " data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}' style="height:460px;">
-    <!-- Parallax Image -->
-    <div class="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-pos-bottom-center g-bg-bluegray-opacity-0_2--after" style="height: 130%; background-image: url(<?= SITE_URL ?>/img/contact.jpg);"></div>
-    <!-- End Parallax Image -->
-    
-    <!-- Promo Block Content -->
-    <div class="container g-color-white text-center g-py-150">
-        <h3 class="h2 g-font-weight-300 mb-0"><?= $content['HEADER']['heading']; ?></h3>
-        <h2 class="h3 text-uppercase mb-2" style="color:#fff;"><?= $content['HEADER']['text']; ?></h2>
-    </div>
-    <!-- Promo Block Content -->
-</section>
-<!-- End Promo Block -->
-
-<!-- Icon Blocks -->
-<section class="clearfix g-brd-bottom g-brd-gray-light-v4">
-    <!-- Icons Block -->
-    <div class="row no-gutters g-py-60">
-        <div class="col-md-6 col-lg-4 g-brd-right--md g-brd-gray-light-v4">
-            <!-- Icon Blocks -->
-            <div class="text-center g-py-20">
-            <span class="u-icon-v1 u-icon-size--xl g-color-black g-mb-10">
-                <i class="icon-real-estate-027 u-line-icon-pro"></i>
-              </span>
-                <h4 class="h5 g-font-weight-600 g-mb-5"><?= $content['Address']['heading']; ?></h4>
-                <span class="d-block"><?= $content['Address']['text']; ?></span>
+<div class="float-left w-100 about-me-bnr-bg">
+    <div class="container d-flex h-100">
+        <div class="row align-self-center w-100">
+            <div class="col-lg-12 text-center">
+                <h4 class="fadeInUp wow"> Contact Me </h4>
             </div>
-            <!-- End Icon Blocks -->
-        </div>
-        
-        <div class="col-md-6 col-lg-4 g-brd-right--md g-brd-gray-light-v4">
-            <!-- Icon Blocks -->
-            <div class="text-center g-py-20">
-            <span class="u-icon-v1 u-icon-size--xl g-color-black g-mb-10">
-                <i class="icon-communication-062 u-line-icon-pro"></i>
-              </span>
-                <h4 class="h5 g-font-weight-600 g-mb-5"><?= $content['Phone Number']['heading']; ?></h4>
-                <span class="d-block"><?= $content['Phone Number']['text']; ?></span>
-            </div>
-            <!-- End Icon Blocks -->
-        </div>
-        
-        <div class="col-md-6 col-lg-4 g-brd-right--md g-brd-gray-light-v4">
-            <!-- Icon Blocks -->
-            <div class="text-center g-py-20">
-            <span class="u-icon-v1 u-icon-size--xl g-color-black g-mb-10">
-                <i class="icon-electronics-005 u-line-icon-pro"></i>
-              </span>
-                <h4 class="h5 g-font-weight-600 g-mb-5"><?= $content['Email']['heading']; ?></h4>
-                <span class="d-block"><?= $content['Email']['text']; ?></span>
-            </div>
-            <!-- End Icon Blocks -->
-        </div>
-        
-       
-    </div>
-    <!-- End Icons Block -->
-</section>
-<!-- End Icon Blocks -->
-
-<!-- Contact Form -->
-<section class="container g-py-100">
-    <div class="row justify-content-center g-mb-70">
-        <div class="col-lg-7">
-            <!-- Heading -->
-            <div class="text-center">
-                <h2 class="h1 g-color-black g-font-weight-700 text-uppercase mb-4"><?= $content['Tell us about yourself']['heading']; ?></h2>
-                <div class="d-inline-block g-width-70 g-height-2 g-bg-black mb-4"></div>
-                <p class="g-font-size-18 mb-0"><?= $content['Tell us about yourself']['text']; ?></p>
-            </div>
-            <!-- End Heading -->
         </div>
     </div>
-    
-    <div class="row justify-content-center">
-        <div class="col-lg-9">
-            <form>
-                <div class="row">
-                    <div class="col-md-6 form-group g-mb-20">
-                        <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="Name">
-                    </div>
-                    
-                    <div class="col-md-6 form-group g-mb-20">
-                        <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="email" placeholder="Email">
-                    </div>
-                    
-                    <div class="col-md-6 form-group g-mb-20">
-                        <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="text" placeholder="Subject">
-                    </div>
-                    
-                    <div class="col-md-6 form-group g-mb-20">
-                        <input class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--hover rounded-3 g-py-13 g-px-15" type="tel" placeholder="Phone">
-                    </div>
-                    
-                    <div class="col-md-12 form-group g-mb-40">
-                        <textarea class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-gray-light-v3 g-brd-primary--hover g-resize-none rounded-3 g-py-13 g-px-15" rows="7" placeholder="Message"></textarea>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <button class="btn u-btn-primary g-font-weight-600 g-font-size-13 text-uppercase g-rounded-25 g-py-15 g-px-30" type="submit" role="button">Send Request</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<!-- End Contact Form -->
-
-<!-- Google Map -->
-<div id="GMapCustomized-light" class="js-g-map embed-responsive embed-responsive-21by9 g-height-400" data-type="custom" data-lat="40.674" data-lng="-73.946" data-zoom="12" data-title="Agency" data-styles='[["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]], ["", "labels", [{"visibility":"on"}]], ["water", "", [{"color":"#bac6cb"}]] ]'
-     data-pin="true" data-pin-icon="img/icons/pin/green.png">
 </div>
-<!-- End Google Map -->
-<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAtt1z99GtrHZt_IcnK-wryNsQ30A112J0&callback=initMap" async defer></script>
+
+
+<div class="float-left w-100 p-tb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 abt-add-out fadeInUp wow">
+                <h4><i class="far fa-building"></i> Toronto OfFIce </h4>
+                <div class="abt-map">
+                    <img src="<?=SITE_URL; ?>img/GoogleMap-1.jpg">
+                </div>
+                <p> Ofﬁce Address: 1780 Albion Road, #2, Toronto, ON   M9V 1C1 </p>
+                <div class="float-left w-100 mt-3">
+                    <p> Phone: 416-742-8000 </p>
+                    <p> Fax: 416-742-8001 </p>
+                </div>
+                <div class="float-left w-100 mt-4">
+                    <h4><i class="far fa-clock"></i> Business Hours </h4>
+                    <p> Monday to Friday: 9.00 AM to 9.00 PM </p>
+                    <p> Saturday: 9.00 AM to 6.00 PM </p>
+                    <p> Sunday: 10.00 AM to 5.00 PM </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 abt-add-out mt-md-40 fadeInUp wow">
+                <h4><i class="far fa-building"></i> Mississauga OfFIce </h4>
+                <div class="abt-map">
+                    <img src="<?=SITE_URL; ?>img/GoogleMap-1.jpg">
+                </div>
+                <p> Ofﬁce Address: 120 Matheson Blvd E, #103 Mississauga, ON L4Z 1X1 </p>
+                <div class="float-left w-100 mt-3">
+                    <p> Phone: 905-366-8000 </p>
+                    <p> Fax: 905-366-8101 </p>
+                </div>
+                <div class="float-left w-100 mt-4">
+                    <h4><i class="far fa-clock"></i> Business Hours </h4>
+                    <p> Monday to Friday: 9.00 AM to 9.00 PM </p>
+                    <p> Saturday: 9.00 AM to 6.00 PM </p>
+                    <p> Sunday: 10.00 AM to 5.00 PM </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 abt-add-out mt-md-40 fadeInUp wow">
+                <h4><i class="far fa-building"></i> Brampton OfFIce </h4>
+                <div class="abt-map">
+                    <img src="<?=SITE_URL; ?>img/GoogleMap-1.jpg">
+                </div>
+                <p> Ofﬁce Address: 190 Bovaird Dr W # 50, Brampton, ON   L7A 1A2 </p>
+                <div class="float-left w-100 mt-3">
+                    <p> Phone: 905-874-9200 </p>
+                    <p> Fax: 905-874-4293 </p>
+                </div>
+                <div class="float-left w-100 mt-4">
+                    <h4><i class="far fa-clock"></i> Business Hours </h4>
+                    <p> Monday to Friday: 9.00 AM to 9.00 PM </p>
+                    <p> Saturday: 9.00 AM to 6.00 PM </p>
+                    <p> Sunday: 10.00 AM to 5.00 PM </p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<div class="float-left w-100 p-tb-80 bg-grey">
+    <div class="container d-flex h-100">
+        <div class="row w-100 justify-content-between">
+            <div class="col-md-6 align-self-top flex-fill fadeInUp wow">
+                <div class="row">
+                    
+                    <div class="col-lg-4 mb-3">
+                        <input class="form-control" type="text" name="" placeholder="Name"/>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-3">
+                        <input class="form-control" type="text" name="" placeholder="Email id"/>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-3">
+                        <input class="form-control" type="text" name="" placeholder="Phone Number"/>
+                    </div>
+                    
+                    <div class="col-md-12 mb-3">
+                        <textarea class="form-control h-100" placeholder=""> Message </textarea>
+                    </div>
+                    
+                    <div class="col-sm-3 mb-15-575">
+                        <h5> I am a </h5>
+                    </div>
+                    
+                    <div class="col-sm-3 col-3-575">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">Buyer
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3 col-3-575">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">Seller
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3 col-3-575">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">Renter
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12 mt-3">
+                        <div class="g-recaptcha" data-sitekey="6LcCuYYUAAAAANIlYSl-XAJPy4jNPj7Ajm9ej3AO"></div>
+                    </div>
+                    
+                    <div class="col-lg-12 mt-3">
+                        <input class="btn" type="submit" name="" value="submit">
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-md-4 align-self-top mt-md-40 flex-fill abt-ryt-top-ad fadeInUp wow">
+                <h4 class="inner-heading"> Priten Shah </h4>
+                <h5> Sales Representative </h5>
+                <p> Century 21 People’s choice Realty Inc. </p>
+                <p> Cell # <span> +1 647.297.7179 </span></p>
+                <p> Oﬃce # <span> +1 416 742 8000 </span></p>
+                <p> email: <span> priten.shah@century21.ca </span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            
+            if (scroll >= 200) {
+                $(".header-outer").addClass("fixed");
+            } else {
+                $(".header-outer").removeClass("fixed");
+            }
+        });
+        
+        
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
+        
+    });
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 100,
+            callback: function (box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+        }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function () {
+        var section = document.createElement('section');
+        section.className = 'section--purple wow fadeInDown';
+        this.parentNode.insertBefore(section, this);
+    };
+</script>
+

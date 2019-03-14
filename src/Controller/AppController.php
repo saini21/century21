@@ -81,7 +81,7 @@ class AppController extends Controller {
         } else {
             $this->viewBuilder()->setLayout('home');
             $header = $this->getContent('Home Header');
-			$this->set('header', $header);
+            $this->set('header', $header);
             $footer = $this->getContent('Home Footer');
             $this->set('footer', $footer);
         }
@@ -204,13 +204,13 @@ class AppController extends Controller {
         return $this->redirect($url);
     }
     
-    public function getContent($page , $nl2br = false) {
-		$this->loadModel('Pages');
+    public function getContent($page, $nl2br = false) {
+        $this->loadModel('Pages');
         $sections = $this->Pages->find()->contain(['Images'])->where(['page' => $page])->all();
         $content = [];
         if (!empty($sections)) {
             foreach ($sections as $section) {
-                if($section->section_type == "image") {
+                if ($section->section_type == "image") {
                     $content[$section->section_name] = empty($section->image) ? "NA" : $section->image->image;
                 } else {
                     $content[$section->section_name] = $nl2br ? nl2br($section->section_text) : $section->section_text;
@@ -220,7 +220,85 @@ class AppController extends Controller {
         return $content;
     }
     
-    public function isIE(){
-		return (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false)) ? true: false;
-	}
+    public function isIE() {
+        return (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false)) ? true : false;
+    }
+    
+    
+    public function getLatLong($address = []) {
+        if (!empty($address)) {
+            //Send request and receive json data by address
+            if (is_array($address)) {
+                $formattedAddress = str_replace(' ', '+', implode(" ", $address));
+            } else {
+                $formattedAddress = str_replace(' ', '+', $address);
+            }
+            
+            if (!empty($formattedAddress)) {
+                $geocodeFromAddr = file_get_contents('https://maps.googleapis.com/maps/api/geocode/json?address=' . $formattedAddress . '&key=' . GOOGLE_MAP_KEY);
+                
+                $output = json_decode($geocodeFromAddr);
+                
+                /*Get latitude and longitute from json data*/
+                $lat = $output->results[0]->geometry->location->lat;
+                $lng = $output->results[0]->geometry->location->lng;
+                
+                /*Return latitude and longitude of the given address*/
+                if (!empty($lat) && !empty($lng)) {
+                    return [
+                        'lat' => $lat,
+                        'lng' => $lng
+                    ];
+                } else {
+                    return "lat lng not found";
+                }
+            }
+        }
+    }
+    
+    public function formattedProperties($properties = []) {
+        $formattedProperties = [];
+        if (!empty($properties)) {
+            foreach ($properties as $property) {
+                $fullAddress = [
+                    $property->address,
+                    $property->area,
+                    $property->municipality_district,
+                    $property->county,
+                    $property->zip,
+                ];
+                
+                $shortAddress = [
+                    $property->address,
+                    $property->area,
+                    $property->municipality_district,
+                    $property->zip,
+                ];
+                
+                $image = "files/images/default.png";
+                
+                if (count($property->property_images) > 0) {
+                    $image = $property->property_images[0]->image->medium_thumb;
+                }
+                
+                $p = [
+                    'id' => $property->id,
+                    'for' => $property->s_r,
+                    'address' => implode(", ", $fullAddress),
+                    'short_address' => implode(", ", $shortAddress),
+                    'county' => $property->county,
+                    'price' => $property->lp_dol,
+                    'lat' => $property->lat,
+                    'lng' => $property->lng,
+                    'image' => $image,
+                    'bedrooms' => empty($property->bedroom) ? 1 : $property->bedroom,
+                    'bathrooms' => empty($property->bath_total) ? 1 : $property->bath_total
+                ];
+                
+                $formattedProperties[] = $p;
+            }
+        }
+        
+        return $formattedProperties;
+    }
 }

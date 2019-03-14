@@ -14,6 +14,14 @@ define('SMALL_THUMB_WIDTH', 200);
 define('MEDIUM_THUMB_WIDTH', 500);
 define('LARGE_THUMB_WIDTH', 900);
 
+
+/*
+ * GOOGLE_MAP_KEY
+ *
+ */
+define('GOOGLE_MAP_KEY', "AIzaSyBw7LaXFSl9JeoMOAhtjBBOpjnQVREGreQ");
+
+
 /*
  * Database Details
  */

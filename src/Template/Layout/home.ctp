@@ -32,6 +32,7 @@
         'bootstrap',
         'owl.carousel.min',
         'jquery.validate.min',
+        'wow.min',
         'custom',
     ]) ?>
     

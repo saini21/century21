@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
@@ -27,9 +28,8 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\City $city
  * @property \App\Model\Entity\State $state
  */
-class User extends Entity
-{
-
+class User extends Entity {
+    
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -59,7 +59,7 @@ class User extends Entity
         'city' => true,
         'state' => true
     ];
-
+    
     /**
      * Fields that are excluded from JSON versions of the entity.
      *
